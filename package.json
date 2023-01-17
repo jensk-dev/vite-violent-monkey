@@ -1,0 +1,27 @@
+{
+  "name": "vite-violent-monkey",
+  "private": false,
+  "homepage": "https://github.com/jensk-dev/vite-violent-monkey",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/routebound.cjs",
+  "module": "./dist/routebound.js",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm build:once && concurrently -r --kill-others \"pnpm build\" \"pnpm preview\"",
+    "build": "tsc && vite build --watch",
+    "build:once": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/node": "^18.11.18",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.32.0",
+    "rollup-plugin-violent-monkey": "0.0.2-b",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  }
+}
