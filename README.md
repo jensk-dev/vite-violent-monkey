@@ -19,10 +19,10 @@ To setup auto publishing you must set the following variables in your `repositor
 | GIST_FILE_NAME | Variable  | The file name to publish, set this to the filename of the violentmonkey script. e.g. `example.user.js`  |
 | PUBLISH_GIST  | Secret  | A [github personal access token](https://github.com/settings/tokens/) with the `gist` grant  |
 
-After you've set all the variables, add the latest gist link to your `violentmonkey.metadata.js` file (See [The Gist URL Structure](#the-gist-url-structure)):
+After you've set all the variables, add the latest gist link to your `violentmonkey.metadata.ts` file (See [The Gist URL Structure](#the-gist-url-structure)):
 
 ```js
-// violentmonkey.metadata.js
+// violentmonkey.metadata.ts
 import { defineMetadata } from "rollup-plugin-violent-monkey";
 
 /**
