@@ -3,7 +3,7 @@ import dns from "dns";
 import { defineConfig } from "vite";
 import { plugin as violentMonkey } from "rollup-plugin-violent-monkey";
 
-import { script } from "./violentmonkey.metadata.js";
+import metadata, { script } from "./violentmonkey.metadata";
 
 dns.setDefaultResultOrder("verbatim");
 
@@ -17,7 +17,7 @@ export default defineConfig({
       formats: ["es"]
     },
     rollupOptions: {
-      plugins: [violentMonkey()],
+      plugins: [violentMonkey(metadata)],
       output: {
         manualChunks: {}
       }
