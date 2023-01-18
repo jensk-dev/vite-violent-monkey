@@ -22,5 +22,5 @@ export default defineMetadata({
   localizedDescription: {
     "de-DE": "Ein Beispielskript für rollup-plugin-violent-monkey"
   },
-  grants: ["GM_addElement", "GM.addStyle", "window.focus", "window.close"]
+  grants: ["GM_addElement", "GM.addStyle", "window.focus", "window.close", "GM_deleteValue"]
 });
