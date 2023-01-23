@@ -1,3 +1,3 @@
-export function myNewScript() {
+export function myModule() {
   console.log("Hello World");
 }

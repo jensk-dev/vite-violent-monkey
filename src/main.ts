@@ -1,3 +1,7 @@
-import { myNewScript } from "./module";
+import { myModule } from "./module";
 
-myNewScript();
+function myScript() {
+  myModule();
+}
+
+myScript();
