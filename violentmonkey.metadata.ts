@@ -19,7 +19,7 @@ export default defineMetadata({
   namespace: "example-namespace",
   match: [
     "*://*.*.*/*",
-    "https://example.com"
+    "https://example.com/"
   ],
   version: "1.0",
   description: "An example script for rollup-plugin-violent-monkey",
