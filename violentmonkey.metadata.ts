@@ -17,8 +17,9 @@ export default defineMetadata({
     "nl-NL": "Voorbeeld script"
   },
   namespace: "example-namespace",
-  include: [
-    "*://*.*.*/*"
+  match: [
+    "*://*.*.*/*",
+    "https://example.com"
   ],
   version: "1.0",
   description: "An example script for rollup-plugin-violent-monkey",

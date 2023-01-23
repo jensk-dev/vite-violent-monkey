@@ -20,7 +20,7 @@
     "@types/node": "^18.11.18",
     "concurrently": "^7.6.0",
     "eslint": "^8.32.0",
-    "rollup-plugin-violent-monkey": "0.0.8",
+    "rollup-plugin-violent-monkey": "0.1.1",
     "typescript": "^4.9.4",
     "vite": "^4.0.4"
   }
