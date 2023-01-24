@@ -30,5 +30,9 @@ export default defineMetadata({
   resources: {
     resource1: "https://google.com",
     resource2: "https://bing.com"
-  }
+  },
+  // require jquery as a dependency for the script
+  require: [
+    "https://code.jquery.com/jquery-3.6.3.min.js"
+  ]
 });

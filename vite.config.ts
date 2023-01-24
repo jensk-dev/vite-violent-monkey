@@ -5,25 +5,39 @@ import { plugin as violentMonkey } from "rollup-plugin-violent-monkey";
 
 import metadata, { script } from "./violentmonkey.metadata";
 
+// sets local dev server address to 127.0.0.1 instead of localhost, which is required for violentmonkey to work.
 dns.setDefaultResultOrder("verbatim");
 
-const fileName = `${script}.user`;
+const outFileName = `${script}.user.js`;
+const entryFilePath = resolve(__dirname, "src/main.ts");
+
+// exclude jquery from the build
+const external = [
+  /^jquery$/
+];
+
+// set $ as the global associated with jquery
+const globals = {
+  jquery: "$"
+};
 
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/main.ts"),
-      fileName,
-      formats: ["es"]
+      entry: entryFilePath,
+      name: script,
+      formats: ["iife"]
     },
     rollupOptions: {
-      plugins: [violentMonkey(metadata)],
       output: {
-        manualChunks: {}
-      }
+        entryFileNames: outFileName,
+        globals
+      },
+      plugins: [violentMonkey(metadata)],
+      external
     }
   },
   server: {
-    open: `/${fileName}.js`
+    open: outFileName
   }
 });

@@ -1,7 +1,15 @@
+import $ from "jquery";
+
 import { myModule } from "./module";
 
-function myScript() {
+export function logBody() {
+  const body = $("body");
+  console.log(body);
+}
+
+export function myScript() {
   myModule();
 }
 
 myScript();
+logBody();
